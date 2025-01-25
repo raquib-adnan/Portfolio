@@ -1,0 +1,272 @@
+/* Root Variables */
+:root {
+  --primary-color: #e91e63; /* Pinkish red */
+  --secondary-color: #ffffff; /* White */
+  --background-color: #181818; /* Dark background */
+  --card-background: #1e1e1e; /* Slightly lighter dark */
+  --text-color: #bbbbbb; /* Light gray */
+  --text-highlight: #ffffff; /* Highlighted text color */
+  --font-family: "Arial", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 1rem 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: var(--text-highlight);
+}
+
+header p {
+  margin: 0.5rem 0 0;
+  font-size: 1.2rem;
+}
+
+nav {
+  background-color: var(--card-background);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+  color: var(--primary-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  border-bottom: 2px solid var(--primary-color);
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--card-background);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--secondary-color);
+}
+
+.card p {
+  margin: 0.5rem 0;
+}
+
+.card a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+ul li {
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .about-me {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-image {
+    margin: 1rem 0;
+  }
+}
+
+.about-me {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.profile-image {
+  flex-shrink: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--primary-color);
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.parallel-navbar {
+  display: flex;
+  flex-direction: column; /* Change layout to stack items */
+  align-items: center; /* Center items horizontally */
+  background-color: var(--background-color);
+  padding: 0.5rem 2rem;
+}
+
+/* Social Media Navbar */
+.social-navbar {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 0.5rem; /* Add spacing below social links */
+}
+
+.social-navbar a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+}
+
+.social-navbar a:hover {
+  color: var(--primary-color);
+}
+
+.social-navbar a svg {
+  fill: var(--secondary-color);
+  width: 20px;
+  height: 20px;
+  transition: fill 0.3s;
+}
+
+.social-navbar a:hover svg {
+  fill: var(--primary-color);
+}
+
+/* Main Navigation Bar */
+nav {
+  background-color: var(--card-background);
+  padding: 1rem 0;
+  position: relative;
+
+  z-index: 1000;
+  border: 2px solid var(--primary-color); /* Add a border using the primary color */
+  border-radius: 5px; /* Optional: Add rounded corners if desired */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+  color: var(--primary-color);
+}
