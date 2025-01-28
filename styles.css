@@ -181,6 +181,16 @@ ul li {
   }
 }
 
+@media (min-width: 768px) {
+  .social-container summary {
+      display: none; /* Hide toggle button on large screens */
+  }
+  .parallel-navbar {
+      display: flex !important;
+      flex-direction: row;
+  }
+}
+
 .about-me {
   display: flex;
   align-items: center;
@@ -213,7 +223,6 @@ ul li {
 /* Social Media Navbar */
 .social-navbar {
   display: flex;
-  /* flex-wrap: wrap; */
   gap: 1.5rem;
   margin-bottom: 0.5rem; /* Add spacing below social links */
 }
@@ -241,6 +250,37 @@ ul li {
 
 .social-navbar a:hover svg {
   fill: var(--primary-color);
+}
+
+/* Style the dropdown button */
+.social-container summary {
+  background-color: var(--background-color);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+}
+
+/* Remove default arrow icon */
+.social-container summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Style the social links */
+.parallel-navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+/* Hide social links by default */
+.social-container:not([open]) .parallel-navbar {
+  display: none;
 }
 
 /* Main Navigation Bar */
